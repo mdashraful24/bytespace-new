@@ -10,6 +10,16 @@ export const heroAssets = {
   avatars: "/images/landing/avatar1.png",
 };
 
+export const creatorAssets = {
+  shape15: "/images/landing/shape15.png",
+  shape2: "/images/landing/shape2.png",
+  shape10: "/images/landing/shape10.png",
+  shape11: "/images/landing/shape11.png",
+  shape12: "/images/landing/shape12.png",
+  shape13: "/images/landing/shape13.png",
+  shape14: "/images/landing/shape14.png",
+};
+
 export const brandAssets = {
   siteLogo: "/images/landing/logo.png",
   shoppingBag: "/images/landing/shopping-bag.png",
