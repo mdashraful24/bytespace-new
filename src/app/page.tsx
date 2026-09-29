@@ -1,11 +1,12 @@
 import CourseDiscovery from "@/components/landing/CourseDiscovery";
+import CreatorSection from "@/components/landing/CreatorSection";
 import GrowthSection from "@/components/landing/GrowthSection";
 import HeroSection from "@/components/landing/HeroSection";
 import LearningPaths from "@/components/landing/LearningPaths";
 import LogoBand from "@/components/landing/LogoBand";
+import SiteFooter from "@/components/landing/SiteFooter";
 import SiteHeader from "@/components/landing/SiteHeader";
 import "./landing.css";
-import CreatorSection from "@/components/landing/CreatorSection";
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       <LearningPaths />
       <GrowthSection />
       <CreatorSection />
+      <SiteFooter />
     </main>
   );
 }
