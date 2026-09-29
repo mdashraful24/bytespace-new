@@ -1,11 +1,19 @@
-import Navbar from "@/components/Navbar";
+import CourseDiscovery from "@/components/landing/CourseDiscovery";
+import HeroSection from "@/components/landing/HeroSection";
+import LearningPaths from "@/components/landing/LearningPaths";
+import LogoBand from "@/components/landing/LogoBand";
+import SiteHeader from "@/components/landing/SiteHeader";
+import "./landing.css";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div>
-      <main>
-        <Navbar />
-      </main>
-    </div>
+    <main id="top" className="landing">
+      <div className="grid-lines" aria-hidden="true" />
+      <SiteHeader />
+      <HeroSection />
+      <LogoBand />
+      <CourseDiscovery />
+      <LearningPaths />
+    </main>
   );
 }
