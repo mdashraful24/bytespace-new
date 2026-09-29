@@ -91,13 +91,13 @@
 
 .landing .growth-stats strong {
   color: #174cdf;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .landing .growth-stats span {
   color: #777980;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .landing .growth-visual {
@@ -1103,6 +1103,135 @@
   box-shadow: 0 10px 20px rgba(25, 34, 70, 0.08);
 }
 
+.landing .creator-section {
+  --shape-scale: 1;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 600px;
+  padding: 80px 0;
+  background: #0d4fe8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.landing .creator-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.95;
+}
+
+.landing .creator-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  display: block;
+  height: auto;
+  width: calc(var(--shape-w, 100px) * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--left-top {
+  --shape-w: 275px;
+
+  left: calc(0px * var(--shape-scale, 1));
+  top: calc(0px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--left-mid-top-top {
+  --shape-w: 200px;
+
+  left: calc(210px * var(--shape-scale, 1));
+  top: calc(50px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--left-mid-top {
+  --shape-w: 150px;
+
+  left: calc(0px * var(--shape-scale, 1));
+  top: calc(250px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--left-bottom {
+  --shape-w: 300px;
+
+  left: calc(0px * var(--shape-scale, 1));
+  bottom: calc(0px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--left-mid-bottom {
+  --shape-w: 202px;
+
+  left: calc(-47px * var(--shape-scale, 1));
+  top: calc(229px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--right-top {
+  --shape-w: 141px;
+
+  right: calc(180px * var(--shape-scale, 1));
+  top: calc(-0px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--right-mid {
+  --shape-w: 230px;
+
+  right: calc(0px * var(--shape-scale, 1));
+  top: calc(0px * var(--shape-scale, 1));
+}
+
+.landing .creator-shape--right-bottom {
+  --shape-w: 400px;
+
+  right: calc(0px * var(--shape-scale, 1));
+  bottom: calc(0px * var(--shape-scale, 1));
+}
+
+.landing .creator-content {
+  position: relative;
+  z-index: 2;
+  width: min(980px, calc(100% - 80px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.landing .creator-content h2 {
+  margin: 0 auto;
+  max-width: 700px;
+  color: #fff;
+  font-size: clamp(28px, 3vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -1.6px;
+  font-weight: 700;
+}
+
+.landing .creator-content p {
+  width: 100%;
+  margin: 40px auto 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(12px, 1.2vw, 18px);
+  line-height: 1.5;
+}
+
+.landing .creator-content button {
+  margin-top: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #c9ff00;
+  color: #0d1b05;
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 26px rgba(178, 255, 0, 0.28);
+}
+
 .landing .path-icon {
   width: 45px;
   height: 45px;
@@ -1122,7 +1251,30 @@
   display: block;
 }
 
+@media (max-width: 1200px) {
+  .landing .creator-section {
+    --shape-scale: 0.85;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing .creator-section {
+    --shape-scale: 0.68;
+  }
+}
+
 @media (max-width: 800px) {
+  .landing .creator-section {
+    --shape-scale: 0.58;
+
+    min-height: 520px;
+    padding: 60px 0;
+  }
+
+  .landing .creator-content {
+    width: calc(100% - 40px);
+  }
+
   .landing .asset-shape4 {
     right: -70px;
   }
