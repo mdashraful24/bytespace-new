@@ -3,6 +3,7 @@ import HeroSection from "@/components/landing/HeroSection";
 import LearningPaths from "@/components/landing/LearningPaths";
 import LogoBand from "@/components/landing/LogoBand";
 import SiteHeader from "@/components/landing/SiteHeader";
+import GrowthSection from "@/components/landing/GrowthSection";
 import "./landing.css";
 
 export default function Page() {
@@ -14,6 +15,7 @@ export default function Page() {
       <LogoBand />
       <CourseDiscovery />
       <LearningPaths />
+      <GrowthSection />
     </main>
   );
 }
