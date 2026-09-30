@@ -116,21 +116,21 @@ export default function LoginPage() {
                     <div className="login-divider">
                         <span>or</span>
                     </div>
-                    <div className="login-socials">
+                    <div className="login-socials mb-5 mt-3">
                         <button type="button" aria-label="Continue with Facebook">
                             <Image
                                 src={assets.facebook}
                                 alt=""
-                                width={44}
-                                height={44}
+                                width={50}
+                                height={50}
                             />
                         </button>
                         <button type="button" aria-label="Continue with Google">
                             <Image
                                 src={assets.google}
                                 alt=""
-                                width={44}
-                                height={44}
+                                width={50}
+                                height={50}
                             />
                         </button>
                     </div>

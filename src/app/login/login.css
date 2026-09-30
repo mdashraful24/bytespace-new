@@ -24,7 +24,7 @@
 .login-socials {
   display: flex;
   justify-content: center;
-  gap: 34px;
+  gap: 16px;
 }
 
 /* The brand image is the whole control - no border, fill or padding. */
