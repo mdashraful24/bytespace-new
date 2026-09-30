@@ -123,7 +123,7 @@
   z-index: 2;
   /* left: 0px; */
   bottom: -150px;
-  width: 400px;
+  width: 430px;
   height: auto;
   object-position: bottom;
 }
@@ -239,13 +239,13 @@
 }
 
 .landing .growth-copy-bottom {
-  margin-top: 80px;
-  padding-left: 40px;
+  margin-top: 100px;
+  padding-left: 230px;
 }
 
 .landing .growth-copy-bottom p {
   margin-top: 21px;
-  max-width: 360px;
+  /* max-width: 360px; */
 }
 
 .landing .growth-copy-bottom ul {
@@ -369,18 +369,19 @@
 .landing .growth-blur-one {
   top: -100px;
   left: 0px;
+  width: 1300px;
 }
 
 .landing .growth-blur-two {
   left: 0px;
-  bottom: 0px;
+  bottom: -100px;
   width: 400px;
 }
 
 .landing .growth-blur-three {
   left: 0px;
-  bottom: 90px;
-  width: 550px;
+  bottom: -300px;
+  width: 700px;
 }
 
 .landing .growth-blur-four {

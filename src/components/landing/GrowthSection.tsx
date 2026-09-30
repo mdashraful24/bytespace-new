@@ -11,8 +11,8 @@ export default function GrowthSection() {
   return (
     <section className="growth-section" aria-label="Bytespace learning platform">
       <img className="growth-blur growth-blur-one" src={`${landing}/layerblur1.png`} alt="" aria-hidden="true" />
-      <img className="growth-blur growth-blur-two" src={`${landing}/ellipse22.png`} alt="" aria-hidden="true" />
       <img className="growth-blur growth-blur-three" src={`${landing}/ellipse33.png`} alt="" aria-hidden="true" />
+      <img className="growth-blur growth-blur-two" src={`${landing}/ellipse22.png`} alt="" aria-hidden="true" />
       <img className="growth-blur growth-blur-four" src={`${landing}/ellipse55.png`} alt="" aria-hidden="true" />
       <img className="growth-blur growth-blur-five" src={`${landing}/ellipse44.png`} alt="" aria-hidden="true" />
 
