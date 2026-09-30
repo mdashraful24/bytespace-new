@@ -28,7 +28,7 @@ export default function HeroSection() {
       ))}
 
       <div className="copy">
-        <h1 id="hero-title">
+        <h1 id="hero-title" className="hero-copy">
           Get Access to Hundreds
           <br />
           Courses Available

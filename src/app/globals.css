@@ -34,6 +34,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
+  /* Reserve the 8px custom scrollbar so auto margins center on the visual
+     center instead of the scrollable width. */
+  scrollbar-gutter: stable;
 }
 
 body {
