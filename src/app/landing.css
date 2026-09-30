@@ -1,6 +1,6 @@
 /* Landing page styles, ported from byte-space-landing-page-design/app/globals.css.
-   Every selector is scoped under .landing so nothing leaks into /login or /signup.
-   In particular .course-card and --lime collide with the design system in globals.css. */
+  Every selector is scoped under .landing so nothing leaks into the design system.
+  In particular .course-card and --lime collide with the design system in globals.css. */
 
 .landing {
   --blue: #123cda;
@@ -818,6 +818,7 @@
 
 .landing .search-form {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 11px;
 }
@@ -844,13 +845,32 @@
 }
 
 .landing .search-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
   border: 0;
-  background: var(--lime);
+  background: linear-gradient(180deg, #c8ff00 0%, #a6e600 100%);
   border-radius: 22px;
-  padding: 0 26px;
-  font-size: 13px;
+  padding: 0 28px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   color: #152000;
   cursor: pointer;
+  box-shadow: 0 10px 24px rgba(178, 255, 0, 0.28);
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.landing .search-form button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(178, 255, 0, 0.45);
+}
+
+.landing .search-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(178, 255, 0, 0.3);
 }
 
 .landing .float-card {

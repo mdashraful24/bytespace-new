@@ -1,0 +1,318 @@
+/* Shared by every auth route (/login, /signup). Anything that differs between
+   pages belongs in the css file next to that route instead. */
+
+.login-page,
+.signup-page {
+  min-height: 100vh;
+  background: #123cda;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-grid,
+.signup-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.55) 1px, transparent 1px);
+  background-size: 77px 77px;
+}
+
+.login-inner,
+.signup-inner {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  max-width: 900px;
+  grid-template-columns: 1fr 440px;
+  gap: 56px;
+}
+
+/* min-height matches the 600px panel, so the collage keeps the same vertical
+   rhythm no matter which fields the form holds. */
+.login-promo,
+.signup-promo {
+  align-self: stretch;
+  position: relative;
+  padding-top: 135px;
+  min-height: 600px;
+}
+
+.login-copy,
+.signup-copy {
+  margin-top: 34px;
+  max-width: 315px;
+}
+
+.login-copy h1,
+.signup-copy h1 {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+.login-copy p,
+.signup-copy p {
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login-collage,
+.signup-collage {
+  position: absolute;
+  width: 360px;
+  height: 390px;
+  left: 0;
+  bottom: 190px;
+}
+
+.login-card,
+.signup-card {
+  position: absolute;
+  width: 260px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-card-back,
+.signup-card-back {
+  left: 0;
+  top: 65px;
+}
+
+.login-card-front,
+.signup-card-front {
+  left: 78px;
+  top: 0;
+}
+
+.login-triangle,
+.signup-triangle {
+  position: absolute;
+  width: 110px;
+  left: -4px;
+  bottom: -4px;
+}
+
+.login-shape16,
+.signup-shape16 {
+  position: absolute;
+  width: 110px;
+  left: 15px;
+  top: 8px;
+  z-index: 3;
+}
+
+.login-scribble,
+.signup-scribble {
+  position: absolute;
+  width: 120px;
+  right: 6px;
+  bottom: 52px;
+  z-index: 3;
+}
+
+.login-students,
+.signup-students {
+  position: absolute;
+  right: 30px;
+  bottom: 6px;
+  width: 174px;
+}
+
+.login-panel,
+.signup-panel {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  min-height: 600px;
+  padding: 40px;
+  background: #fff;
+  color: #292a31;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.login-eyebrow,
+.signup-eyebrow {
+  font-size: 12px;
+  color: #2557ed;
+  margin: 0 0 4px;
+}
+
+.login-panel h2,
+.signup-panel h2 {
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+  margin: 0 0 26px;
+  font-weight: 600;
+}
+
+.login-panel form,
+.signup-panel form {
+  display: grid;
+  gap: 16px;
+}
+
+.login-panel label,
+.signup-panel label {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.login-panel input,
+.signup-panel input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dfe3ed;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #292a31;
+  outline: none;
+}
+
+.login-panel input::placeholder,
+.signup-panel input::placeholder {
+  color: #9aa1b1;
+}
+
+/* The asterisk glyph sits at the top of the x-height band, so the hint reads as
+   raised next to the other two placeholders. Nudge it back onto the baseline. */
+.login-panel input[type="password"]::placeholder,
+.signup-panel input[type="password"]::placeholder {
+  letter-spacing: 1.5px;
+  position: relative;
+  top: 2px;
+}
+
+.login-panel input:focus,
+.signup-panel input:focus {
+  border-color: #2557ed;
+  box-shadow: 0 0 0 3px rgba(37, 87, 237, 0.12);
+}
+
+.login-panel form button,
+.signup-panel form button {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 12px 26px;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #152000;
+  background: linear-gradient(180deg, #c8ff00 0%, #a6e600 100%);
+  box-shadow: 0 10px 24px rgba(178, 255, 0, 0.28);
+  cursor: pointer;
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.login-panel form button:hover,
+.signup-panel form button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(178, 255, 0, 0.45);
+}
+
+.login-panel form button:active,
+.signup-panel form button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(178, 255, 0, 0.3);
+}
+
+.login-footer,
+.signup-login {
+  font-size: 12px;
+  color: #737987;
+  text-align: center;
+  margin: 25px 0 0;
+}
+
+.login-footer a,
+.signup-login a {
+  color: #2557ed;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Sits on the floor of the card instead of trailing the form. */
+.signup-login {
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+@media (max-width: 800px) {
+
+  .login-inner,
+  .signup-inner {
+    max-width: 440px;
+    display: block;
+    padding: 30px 20px;
+  }
+
+  .login-promo,
+  .signup-promo {
+    min-height: 190px;
+  }
+
+  .login-copy,
+  .signup-copy {
+    margin-top: 28px;
+    max-width: 340px;
+  }
+
+  .login-collage,
+  .signup-collage {
+    display: none;
+  }
+
+  .login-panel,
+  .signup-panel {
+    min-height: 0;
+    padding: 32px 28px 28px;
+  }
+
+  .login-panel h2,
+  .signup-panel h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .login-inner,
+  .signup-inner {
+    padding: 24px 14px;
+  }
+
+  .login-panel,
+  .signup-panel {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .login-promo,
+  .signup-promo {
+    min-height: 180px;
+  }
+}

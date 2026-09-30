@@ -534,6 +534,7 @@ body {
   body .nav-link::after,
   body .navbar,
   body .mobile-menu-link,
+  body .search-form button,
   body .btn-lime,
   body .btn-outline-white,
   body .btn-blue,
@@ -541,6 +542,8 @@ body {
   body .btn-dark {
     transition: none;
   }
+  body .search-form button:hover,
+  body .search-form button:active,
   body .btn-lime:hover,
   body .btn-white:hover,
   body .btn-blue:hover,
