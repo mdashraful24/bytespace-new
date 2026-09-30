@@ -703,7 +703,7 @@
 }
 
 .landing .site-header {
-  height: 120px;
+  height: 85px;
   max-width: 1258px;
   margin: auto;
   display: flex;
@@ -711,7 +711,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 10;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  padding: 0 24px;
 }
 
 .landing .logo {
@@ -789,7 +789,7 @@
 
 .landing .hero-content {
   height: calc(100vh - 85px);
-  min-height: 647px;
+  min-height: 0;
   max-width: var(--section-max);
   margin: auto;
   position: relative;
@@ -800,21 +800,22 @@
   position: relative;
   z-index: 5;
   text-align: center;
-  padding-top: 35px;
+  padding-top: clamp(20px, 3vh, 35px);
 }
 
 .landing .copy h1,
 .landing .hero-copy {
   margin: 0;
-  font-size: 67px;
-  line-height: 1.25;
-  letter-spacing: 1.5px;
+  font-size: clamp(54px, 5.2vw, 76px);
+  line-height: 1.16;
+  letter-spacing: 0.5px;
   font-weight: 600;
 }
 
 .landing .copy p {
-  margin: 25px auto 43px;
-  font-size: 17px;
+  margin: clamp(14px, 1.8vh, 25px) auto clamp(20px, 3vh, 43px);
+  font-size: clamp(14px, 1.1vw, 17px);
+  max-width: min(650px, 85vw);
   opacity: 0.88;
 }
 
@@ -826,7 +827,7 @@
 }
 
 .landing .search-field {
-  width: 450px;
+  width: min(450px, 80vw);
   height: 42px;
   background: white;
   border-radius: 22px;
@@ -944,7 +945,6 @@
 .landing .students-card span {
   margin-top: 3px;
   display: flex;
-  /* align-items: center; */
   gap: 1px;
 }
 
@@ -973,44 +973,44 @@
 
 .landing .asset-shape1 {
   z-index: 3;
-  left: -2px;
+  left: 0;
   top: 20px;
-  width: 300px;
+  width: clamp(200px, 16vw, 300px);
 }
 
 .landing .asset-shape2 {
   z-index: 4;
-  left: 280px;
-  top: 270px;
-  width: 230px;
+  left: calc(50% - clamp(480px, 36vw, 680px));
+  top: clamp(220px, 28vh, 270px);
+  width: clamp(150px, 12vw, 230px);
 }
 
 .landing .asset-shape3 {
   z-index: 3;
-  left: 200px;
+  left: calc(50% - clamp(520px, 40vw, 760px));
   bottom: 20px;
-  width: 330px;
+  width: clamp(220px, 17vw, 330px);
 }
 
 .landing .asset-shape4 {
   z-index: 2;
-  right: 0px;
+  right: 0;
   top: 40px;
-  width: 230px;
+  width: clamp(160px, 12vw, 230px);
 }
 
 .landing .asset-shape5 {
   z-index: 4;
-  right: 300px;
-  top: 290px;
-  width: 200px;
+  right: calc(50% - clamp(460px, 35vw, 660px));
+  top: clamp(230px, 29vh, 290px);
+  width: clamp(140px, 11vw, 200px);
 }
 
 .landing .asset-shape6 {
   z-index: 4;
-  right: 270px;
+  right: calc(50% - clamp(480px, 36vw, 690px));
   bottom: 30px;
-  width: 300px;
+  width: clamp(200px, 16vw, 300px);
   rotate: -9deg;
 }
 
@@ -1018,9 +1018,9 @@
   z-index: 1;
   left: 48%;
   bottom: -105px;
-  width: 1300px;
+  width: clamp(900px, 70vw, 1300px);
   max-width: none;
-  height: 530px;
+  height: clamp(380px, 45vh, 530px);
   transform: translateX(-50%);
 }
 
@@ -1029,7 +1029,7 @@
   z-index: 2;
   left: 50%;
   bottom: 0px;
-  width: 700px;
+  width: clamp(520px, 37vw, 700px);
   max-width: none;
   transform: translateX(-50%);
   pointer-events: none;
@@ -1690,6 +1690,170 @@
   }
 }
 
+/* Laptop screens (14" and 15.6" monitors: 1024px to 1440px) */
+@media (min-width: 801px) and (max-width: 1440px) {
+  .landing .site-header {
+    height: 75px;
+  }
+
+  .landing .hero-content {
+    height: calc(100vh - 75px);
+    min-height: 0;
+  }
+
+  .landing .copy {
+    padding-top: 16px;
+  }
+
+  .landing .copy h1,
+  .landing .hero-copy {
+    font-size: clamp(46px, 4.4vw, 62px);
+    line-height: 1.15;
+    letter-spacing: 0.3px;
+  }
+
+  .landing .copy p {
+    margin: 12px auto 18px;
+    font-size: 14px;
+    max-width: 500px;
+  }
+
+  .landing .search-field {
+    width: clamp(280px, 26vw, 360px);
+    height: 38px;
+  }
+
+  .landing .search-form button {
+    height: 38px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+
+  /* Human / Person image increased ~2x for laptop view */
+  .landing .person-art {
+    width: clamp(950px, 70vw, 1300px);
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  /* Background arch proportionally scaled */
+  .landing .asset-shape7 {
+    width: clamp(1100px, 90vw, 1600px);
+    height: 480px;
+    bottom: -80px;
+  }
+
+  /* Floating badges scaled and positioned proportionally to the 2x human image */
+  .landing .course-card {
+    left: calc(50% - clamp(360px, 28vw, 480px));
+    bottom: clamp(230px, 32vh, 320px);
+    transform: scale(0.95);
+    transform-origin: center bottom;
+  }
+
+  .landing .progress-card {
+    left: calc(50% + clamp(80px, 8vw, 150px));
+    bottom: clamp(180px, 25vh, 260px);
+    transform: scale(0.95);
+    transform-origin: center bottom;
+  }
+
+  .landing .students-card {
+    left: calc(50% - clamp(390px, 30vw, 510px));
+    bottom: clamp(50px, 6vh, 90px);
+    transform: scale(0.95);
+    transform-origin: center bottom;
+  }
+
+  /* Floating decorative artwork shapes scaled and positioned */
+  .landing .asset-shape1 {
+    width: clamp(150px, 13vw, 200px);
+    left: 0;
+    top: 10px;
+  }
+
+  .landing .asset-shape2 {
+    width: clamp(120px, 11vw, 150px);
+    left: calc(50% - clamp(440px, 38vw, 580px));
+    top: 200px;
+  }
+
+  .landing .asset-shape3 {
+    width: clamp(160px, 15vw, 220px);
+    left: calc(50% - clamp(480px, 42vw, 620px));
+    bottom: 10px;
+  }
+
+  .landing .asset-shape4 {
+    width: clamp(130px, 12vw, 160px);
+    right: 0;
+    top: 15px;
+  }
+
+  .landing .asset-shape5 {
+    width: clamp(110px, 10vw, 140px);
+    right: calc(50% - clamp(440px, 38vw, 580px));
+    top: 200px;
+  }
+
+  .landing .asset-shape6 {
+    width: clamp(150px, 15vw, 200px);
+    right: calc(50% - clamp(460px, 40vw, 600px));
+    bottom: 10px;
+  }
+}
+
+/* Height-constrained laptop displays (e.g. 1366x768 with browser toolbar) */
+@media (max-height: 760px) and (min-width: 801px) {
+  .landing .site-header {
+    height: 65px;
+  }
+
+  .landing .hero-content {
+    height: calc(100vh - 65px);
+    min-height: 0;
+  }
+
+  .landing .copy {
+    padding-top: 8px;
+  }
+
+  .landing .copy h1,
+  .landing .hero-copy {
+    font-size: clamp(30px, 2.8vw, 36px);
+    line-height: 1.15;
+  }
+
+  .landing .copy p {
+    margin: 8px auto 14px;
+    font-size: 13px;
+  }
+
+  .landing .course-card {
+    bottom: 160px;
+    transform: scale(0.8);
+  }
+
+  .landing .progress-card {
+    bottom: 115px;
+    transform: scale(0.8);
+  }
+
+  .landing .students-card {
+    bottom: 20px;
+    transform: scale(0.8);
+  }
+
+  .landing .asset-shape2 {
+    top: 160px;
+  }
+
+  .landing .asset-shape5 {
+    top: 170px;
+  }
+}
+
 @media (max-width: 1200px) {
   .landing .creator-section {
     --shape-scale: 0.85;
@@ -1702,7 +1866,100 @@
   }
 }
 
-@media (max-width: 800px) {
+/* Tablet & Mobile Screens: Hide all floating artwork shapes in hero section */
+/* Tablet & Mobile Screens: Hide all floating artwork shapes in hero section */
+@media (max-width: 1023px) {
+
+  .landing .asset-shape1,
+  .landing .asset-shape2,
+  .landing .asset-shape3,
+  .landing .asset-shape4,
+  .landing .asset-shape5,
+  .landing .asset-shape6 {
+    display: none !important;
+  }
+
+  .landing .logo-band-inner {
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    gap: 20px 14px;
+    padding-right: 0px;
+  }
+
+  .landing .course-grid {
+    max-width: 1258px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Tablet Screens (601px to 1023px): Dedicated increased height and spacious layout */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .landing .hero-content {
+    height: auto;
+    min-height: 590px;
+    max-height: 88vh;
+  }
+
+  .landing .copy {
+    padding-top: 28px;
+  }
+
+  .landing .copy h1,
+  .landing .hero-copy {
+    font-size: clamp(36px, 4.5vw, 44px);
+  }
+
+  .landing .copy p {
+    margin: 14px auto 24px;
+    font-size: 13px;
+    max-width: 440px;
+  }
+
+  .landing .person-art {
+    width: clamp(380px, 55vw, 480px);
+    max-height: 54vh;
+  }
+
+  .landing .asset-shape7 {
+    width: clamp(520px, 80vw, 700px);
+    height: 300px;
+    bottom: -40px;
+  }
+
+  .landing .course-card {
+    left: calc(50% - clamp(210px, 28vw, 260px));
+    bottom: 210px;
+    transform: scale(0.88);
+  }
+
+  .landing .progress-card {
+    right: auto;
+    left: calc(50% + clamp(40px, 6vw, 75px));
+    bottom: 165px;
+    transform: scale(0.88);
+  }
+
+  .landing .students-card {
+    left: calc(50% - clamp(230px, 30vw, 280px));
+    bottom: 45px;
+    transform: scale(0.88);
+  }
+
+  .landing .community-section {
+    padding: 30px;
+  }
+
+  .landing .growth-inner {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
   .landing .creator-section {
     --shape-scale: 0.58;
 
@@ -1714,24 +1971,15 @@
     width: calc(100% - 40px);
   }
 
-  .landing .asset-shape4 {
-    right: -70px;
-  }
-
-  .landing .asset-shape5 {
-    right: 75px;
-  }
-
-  .landing .asset-shape6 {
-    right: -18px;
-  }
-
   .landing .asset-shape7 {
-    width: 650px;
+    width: clamp(380px, 85vw, 520px);
+    height: 240px;
+    bottom: -30px;
   }
 
   .landing .person-art {
-    width: 500px;
+    width: clamp(320px, 72vw, 420px);
+    max-height: 48vh;
   }
 
   .landing .logo-band {
@@ -1745,6 +1993,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-items: center;
     gap: 20px 14px;
+    padding-right: 0px;
   }
 
   .landing .brand-lockup {
@@ -1763,7 +2012,7 @@
 
   .landing .site-header {
     padding: 0 22px;
-    height: 70px;
+    height: 65px;
   }
 
   .landing .site-header nav {
@@ -1775,55 +2024,88 @@
   }
 
   .landing .hero-content {
-    height: calc(100vh - 70px);
-    min-height: 660px;
+    height: auto;
+    min-height: 460px;
+    max-height: calc(100vh - 65px);
   }
 
   .landing .copy {
-    padding: 40px 18px 0;
+    padding: 20px 16px 0;
   }
 
   .landing .copy h1,
   .landing .hero-copy {
-    font-size: 38px;
-    letter-spacing: -1.6px;
+    font-size: 34px;
+    letter-spacing: -1.2px;
   }
 
   .landing .copy p {
     font-size: 12px;
-    margin: 20px auto 30px;
+    margin: 12px auto 18px;
+    max-width: 380px;
   }
 
   .landing .search-field {
     width: min(270px, 62vw);
+    height: 38px;
+  }
+
+  .landing .search-form button {
+    height: 38px;
+    font-size: 13px;
   }
 
   .landing .course-card {
-    left: 22px;
-    bottom: 210px;
+    left: 14px;
+    bottom: 160px;
+    transform: scale(0.82);
+    transform-origin: left bottom;
   }
 
   .landing .progress-card {
     left: auto;
-    right: 18px;
-    bottom: 185px;
+    right: 12px;
+    bottom: 135px;
+    transform: scale(0.82);
+    transform-origin: right bottom;
   }
 
   .landing .students-card {
-    left: 22px;
-    bottom: 48px;
+    left: 14px;
+    bottom: 30px;
+    transform: scale(0.82);
+    transform-origin: left bottom;
   }
 }
 
 @media (max-width: 470px) {
 
+  .landing .hero-content {
+    min-height: 410px;
+  }
+
+  .landing .copy {
+    padding: 14px 12px 0;
+  }
+
   .landing .copy h1,
   .landing .hero-copy {
-    font-size: 31px;
+    font-size: 28px;
   }
 
   .landing .copy p {
-    max-width: 330px;
+    max-width: 310px;
+    margin: 8px auto 14px;
+    font-size: 11px;
+  }
+
+  .landing .person-art {
+    width: clamp(260px, 75vw, 320px);
+  }
+
+  .landing .asset-shape7 {
+    width: clamp(300px, 90vw, 380px);
+    height: 180px;
   }
 
   .landing .search-form {
@@ -1836,18 +2118,21 @@
 
   .landing .course-card {
     left: 8px;
-    transform: scale(0.86);
+    bottom: 140px;
+    transform: scale(0.75);
     transform-origin: left bottom;
   }
 
   .landing .progress-card {
     right: 7px;
-    transform: scale(0.86);
+    bottom: 115px;
+    transform: scale(0.75);
     transform-origin: right bottom;
   }
 
   .landing .students-card {
     left: 8px;
+    bottom: 20px;
     transform: scale(0.86);
     transform-origin: left bottom;
   }
@@ -1938,7 +2223,7 @@
 @media (max-width: 470px) {
   .landing .path-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 300px;
+    /* max-width: 300px; */
   }
 
   .landing .path-card {
@@ -1948,11 +2233,11 @@
 
 @media (max-width: 430px) {
   .landing .course-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .landing .course-image-wrap {
-    height: 88px;
+    height: 200px;
   }
 
   .landing .course-tile {
@@ -1960,10 +2245,18 @@
   }
 
   .landing .course-meta img {
-    width: 45px;
+    width: 90px;
   }
 
   .landing .course-heading h2 {
     font-size: 23px;
+  }
+
+  .landing .community-section {
+    padding: 20px;
+  }
+
+  .landing .community-intro p {
+    max-width: 20rem;
   }
 }
