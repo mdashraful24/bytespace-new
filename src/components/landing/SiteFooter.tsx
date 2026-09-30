@@ -30,7 +30,7 @@ export default function SiteFooter() {
             <div className="site-footer__inner">
                 <div className="site-footer__brand-block">
                     <div className="site-footer__logo">
-                        <a href="#top" className="logo" aria-label="ByteSpace home">
+                        <a href="/" className="logo" aria-label="ByteSpace home">
                             <img src={brandAssets.siteLogo} alt="ByteSpace" width="24" height="24" />
                             <span>ByteSpace</span>
                         </a>
