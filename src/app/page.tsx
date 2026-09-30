@@ -1,3 +1,4 @@
+import CommunitySection from "@/components/landing/CommunitySection";
 import CourseDiscovery from "@/components/landing/CourseDiscovery";
 import CreatorSection from "@/components/landing/CreatorSection";
 import GrowthSection from "@/components/landing/GrowthSection";
@@ -19,6 +20,7 @@ export default function Page() {
       <LearningPaths />
       <GrowthSection />
       <CreatorSection />
+      <CommunitySection />
       <SiteFooter />
     </main>
   );
