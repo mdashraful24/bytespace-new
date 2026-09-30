@@ -39,6 +39,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 .landing .growth-row-top {
@@ -531,12 +532,23 @@
 }
 
 @media (max-width: 920px) {
+  .landing .community-section {
+    padding: 64px 32px;
+  }
+
   .landing .community-inner {
     grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .landing .community-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .landing .community-card {
+    min-height: 250px;
+    padding: 24px;
   }
 
   .landing .community-header h2 {
@@ -548,13 +560,77 @@
   }
 }
 
+@media (max-width: 600px) {
+  .landing .community-section {
+    padding: 52px 20px 60px;
+  }
+
+  .landing .community-inner {
+    gap: 28px;
+  }
+
+  .landing .community-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .landing .community-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .landing .community-header h2 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .landing .community-intro p {
+    font-size: 14px;
+  }
+
+  .landing .community-avatar {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+  }
+
+  .landing .community-meta {
+    margin-bottom: 18px;
+  }
+
+  .landing .community-card blockquote {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .landing .community-blur {
+    opacity: 0.4;
+  }
+
+  .landing .community-blur-one {
+    width: 360px;
+  }
+
+  .landing .community-blur-two {
+    width: 420px;
+  }
+
+  .landing .community-blur-three {
+    width: 650px;
+  }
+}
+
 @media (max-width: 700px) {
+  .landing .growth-section {
+    min-height: 0;
+  }
+
   .landing .growth-inner {
-    padding: 42px 24px;
+    padding: 42px 20px 56px;
   }
 
   .landing .growth-row {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .landing .growth-row-top {
@@ -562,7 +638,7 @@
   }
 
   .landing .growth-row-bottom {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .landing .growth-copy-top {
@@ -579,8 +655,9 @@
   }
 
   .landing .growth-visual {
-    height: 330px;
-    margin-top: 12px;
+    width: 100%;
+    height: 250px;
+    margin-top: 0;
   }
 
   .landing .growth-visual-top {
@@ -593,9 +670,8 @@
   }
 
   .landing .growth-visual-bottom {
-    width: 100%;
     order: 2;
-    margin-top: 18px;
+    margin-top: 0;
   }
 
   .landing .growth-copy-bottom {
@@ -605,13 +681,14 @@
   }
 
   .landing .growth-person-top {
-    right: 8%;
-    width: 260px;
+    right: 2%;
+    width: min(78vw, 280px);
   }
 
   .landing .growth-person-bottom {
-    left: 15%;
-    width: 230px;
+    left: 8%;
+    bottom: -4px;
+    width: min(70vw, 250px);
   }
 }
 
@@ -670,26 +747,6 @@
 .landing .brand-lockup img {
   object-fit: contain;
 }
-
-/* .landing .brand-lockup:nth-child(2) img {
-  width: 29px;
-  height: 29px;
-}
-
-.landing .brand-lockup:nth-child(3) img {
-  width: 29px;
-  height: 29px;
-}
-
-.landing .brand-lockup:nth-child(4) img {
-  width: 29px;
-  height: 29px;
-}
-
-.landing .brand-lockup:nth-child(5) img {
-  width: 29px;
-  height: 29px;
-} */
 
 .landing .grid-lines {
   position: absolute;
@@ -987,7 +1044,7 @@
 
 .landing .asset-shape3 {
   z-index: 3;
-  left: calc(50% - clamp(520px, 40vw, 760px));
+  left: calc(50% - clamp(520px, 40vw, 700px));
   bottom: 20px;
   width: clamp(220px, 17vw, 330px);
 }
@@ -1008,10 +1065,10 @@
 
 .landing .asset-shape6 {
   z-index: 4;
-  right: calc(50% - clamp(480px, 36vw, 690px));
+  right: calc(50% - clamp(480px, 36vw, 633px));
   bottom: 30px;
   width: clamp(200px, 16vw, 300px);
-  rotate: -9deg;
+  rotate: -15deg;
 }
 
 .landing .asset-shape7 {
@@ -1444,7 +1501,7 @@
   grid-template-columns: 1.25fr 1.15fr;
   gap: 44px;
   align-items: start;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -1852,6 +1909,24 @@
   .landing .asset-shape5 {
     top: 170px;
   }
+
+  .landing .growth-inner {
+    padding: 30px 0;
+  }
+
+  .landing .growth-person-top {
+    width: 400px;
+  }
+
+  .landing .growth-person-bottom {
+    width: 390px;
+    bottom: -80px;
+  }
+
+  .landing .growth-copy-bottom {
+    margin-top: 70px;
+    padding-left: 150px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1870,6 +1945,11 @@
 /* Tablet & Mobile Screens: Hide all floating artwork shapes in hero section */
 @media (max-width: 1023px) {
 
+  .landing .creator-section {
+    min-height: 500px;
+    padding: 64px 0;
+  }
+
   .landing .asset-shape1,
   .landing .asset-shape2,
   .landing .asset-shape3,
@@ -1877,6 +1957,10 @@
   .landing .asset-shape5,
   .landing .asset-shape6 {
     display: none !important;
+  }
+
+  .landing .creator-shape {
+    display: none;
   }
 
   .landing .logo-band-inner {
@@ -1893,12 +1977,17 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    gap: 25px;
   }
 }
 
 /* Tablet Screens (601px to 1023px): Dedicated increased height and spacious layout */
 @media (min-width: 601px) and (max-width: 1023px) {
+  .landing .creator-section {
+    min-height: 460px;
+    padding: 48px 0;
+  }
+
   .landing .hero-content {
     height: auto;
     min-height: 590px;
@@ -1957,14 +2046,22 @@
   .landing .growth-inner {
     padding: 24px;
   }
+
+  .landing .growth-person-bottom {
+    bottom: -90px;
+  }
+
+  .landing .growth-copy-bottom {
+    padding-left: 40px;
+  }
 }
 
 @media (max-width: 600px) {
   .landing .creator-section {
     --shape-scale: 0.58;
 
-    min-height: 520px;
-    padding: 60px 0;
+    min-height: 460px;
+    padding: 48px 0;
   }
 
   .landing .creator-content {
@@ -2140,7 +2237,7 @@
 
 @media (max-width: 700px) {
   .landing .course-discovery {
-    padding: 52px 16px 56px;
+    padding: 52px 20px 56px;
   }
 
   .landing .course-heading h2 {
@@ -2168,7 +2265,7 @@
 
   .landing .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 25px;
   }
 
   .landing .course-image-wrap {
@@ -2234,6 +2331,7 @@
 @media (max-width: 430px) {
   .landing .course-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .landing .course-image-wrap {
@@ -2258,5 +2356,20 @@
 
   .landing .community-intro p {
     max-width: 20rem;
+  }
+
+  .landing .learning-paths {
+    padding: 0 20px 60px;
+  }
+
+  .landing .growth-person-top {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .landing .growth-person-bottom {
+    bottom: -125px;
+    width: 330px;
+    margin: 0 auto;
   }
 }

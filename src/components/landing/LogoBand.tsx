@@ -6,7 +6,7 @@ export default function LogoBand() {
       <div className="logo-band-inner">
         {brands.map((brand) => (
           <div className="brand-lockup" key={brand.id}>
-            <img src={brand.image} alt={brand.alt} width="34" height="34" />
+            <img src={brand.image} alt={brand.alt} className="w-10 h-10 lg:w-8 lg:h-8" />
             <span>Logoipsum</span>
           </div>
         ))}
