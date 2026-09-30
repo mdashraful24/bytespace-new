@@ -1,7 +1,8 @@
 "use client";
 
-import type { FormEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import type { FormEvent } from "react";
 import "../auth.css";
 import "./login.css";
 import { brandAssets } from "@/components/landing/assets";
@@ -27,7 +28,14 @@ export default function LoginPage() {
             <div className="login-grid" aria-hidden="true" />
             <div className="login-inner">
                 <section className="login-promo" aria-labelledby="login-promo-title">
-                    <img src={brandAssets.siteLogo} alt="ByteSpace" width="24" height="24" />
+                    <Link href="/" aria-label="ByteSpace home">
+                        <Image
+                            src={brandAssets.siteLogo}
+                            alt="ByteSpace"
+                            width={24}
+                            height={24}
+                        />
+                    </Link>
                     <div className="login-copy">
                         <h1 id="login-promo-title">Sign in with ease</h1>
                         <p>

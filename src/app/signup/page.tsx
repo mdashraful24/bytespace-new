@@ -1,7 +1,8 @@
 "use client";
 
-import type { FormEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import type { FormEvent } from "react";
 import "../auth.css";
 import { brandAssets } from "@/components/landing/assets";
 
@@ -24,7 +25,14 @@ export default function SignupPage() {
             <div className="signup-grid" aria-hidden="true" />
             <div className="signup-inner">
                 <section className="signup-promo" aria-labelledby="signup-promo-title">
-                    <img src={brandAssets.siteLogo} alt="ByteSpace" width="24" height="24" />
+                    <Link href="/" aria-label="ByteSpace home">
+                        <Image
+                            src={brandAssets.siteLogo}
+                            alt="ByteSpace"
+                            width={24}
+                            height={24}
+                        />
+                    </Link>
                     <div className="signup-copy">
                         <h1 id="signup-promo-title">Sign up and come in</h1>
                         <p>
