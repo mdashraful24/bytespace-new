@@ -31,7 +31,7 @@ export default function CommunitySection() {
             <img className="community-blur community-blur-two" src={`${landing}/ellipse77.png`} alt="" aria-hidden="true" />
             <img className="community-blur community-blur-three" src={`${landing}/ellipse88.png`} alt="" aria-hidden="true" />
 
-            <div className="w-314.5 mx-auto flex items-center justify-between gap-10 mb-16">
+            <div className="w-314.5 mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-10 mb-16">
                 <div className="community-header">
                     <h2>
                         Discover What Our
