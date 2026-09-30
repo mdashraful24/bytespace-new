@@ -11,6 +11,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.login-page *,
+.signup-page * {
+  box-sizing: border-box;
+}
+
 .login-grid,
 .signup-grid {
   position: absolute;
@@ -261,6 +266,47 @@
   padding-top: 25px;
 }
 
+@media (max-width: 900px) {
+
+  .login-inner,
+  .signup-inner {
+    width: calc(100% - 40px);
+    max-width: 760px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+    gap: 24px;
+  }
+
+  .login-promo,
+  .signup-promo {
+    min-height: 0;
+    padding-top: 56px;
+  }
+
+  .login-collage,
+  .signup-collage {
+    display: none;
+  }
+
+  .login-panel,
+  .signup-panel {
+    min-height: 560px;
+    padding: 32px;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 801px) {
+
+  .login-promo,
+  .signup-promo {
+    padding-top: 40px;
+  }
+
+  .login-collage,
+  .signup-collage {
+    bottom: 70px;
+  }
+}
+
 @media (max-width: 800px) {
 
   .login-inner,
@@ -273,6 +319,7 @@
   .login-promo,
   .signup-promo {
     min-height: 190px;
+    padding-top: 30px;
   }
 
   .login-copy,
@@ -314,5 +361,6 @@
   .login-promo,
   .signup-promo {
     min-height: 180px;
+    padding-top: 24px;
   }
 }
