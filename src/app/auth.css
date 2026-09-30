@@ -32,7 +32,7 @@
   align-items: center;
   max-width: 900px;
   grid-template-columns: 1fr 440px;
-  gap: 56px;
+  gap: 40px;
 }
 
 /* min-height matches the 600px panel, so the collage keeps the same vertical
@@ -41,19 +41,19 @@
 .signup-promo {
   align-self: stretch;
   position: relative;
-  padding-top: 135px;
+  padding-top: 100px;
   min-height: 600px;
 }
 
 .login-copy,
 .signup-copy {
   margin-top: 34px;
-  max-width: 315px;
+  max-width: 370px;
 }
 
 .login-copy h1,
 .signup-copy h1 {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.2;
   margin: 0 0 12px;
   font-weight: 700;
@@ -61,7 +61,7 @@
 
 .login-copy p,
 .signup-copy p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.55;
   margin: 0;
   color: rgba(255, 255, 255, 0.9);
@@ -251,7 +251,7 @@
 .login-footer a,
 .signup-login a {
   color: #2557ed;
-  font-weight: 700;
+  /* font-weight: 700; */
   text-decoration: none;
 }
 

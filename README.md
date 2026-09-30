@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace
 
-## Getting Started
+ByteSpace is a modern learning platform landing page designed to help people discover courses, choose learning paths, grow their skills, and connect with a creative learning community.
 
-First, run the development server:
+**Live demo:** [bytespace-new-dun.vercel.app](https://bytespace-new-dun.vercel.app/)
+
+## Screenshot
+
+[![ByteSpace landing page screenshot](https://drive.google.com/uc?export=view&id=1yyyHz56scYpCTfSuv69UXMEcrAuZxRua)](https://drive.google.com/file/d/1yyyHz56scYpCTfSuv69UXMEcrAuZxRua/view?usp=sharing)
+
+If the preview does not load, [open the screenshot in Google Drive](https://drive.google.com/file/d/1yyyHz56scYpCTfSuv69UXMEcrAuZxRua/view?usp=sharing).
+
+## Key Features
+
+- Responsive landing page for desktop and mobile screens
+- Hero section with primary calls to action and featured course cards
+- Course discovery and learning path sections
+- Growth and creator-focused content sections
+- Community showcase and brand logo band
+- Dedicated sign-in and sign-up routes
+- Reusable React components with locally managed visual assets
+
+## Technologies
+
+- [Next.js](https://nextjs.org/) 16 with the App Router
+- [React](https://react.dev/) 19
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) 4 with PostCSS
+- [Lucide React](https://lucide.dev/) for icons
+- [Biome](https://biomejs.dev/) for formatting and linting
+- [Bun](https://bun.sh/) as the package manager
+
+## Dependencies
+
+### Runtime
+
+- `next`
+- `react`
+- `react-dom`
+- `lucide-react`
+
+### Development
+
+- `@biomejs/biome`
+- `@tailwindcss/postcss`
+- `@types/node`
+- `@types/react`
+- `@types/react-dom`
+- `babel-plugin-react-compiler`
+- `tailwindcss`
+- `typescript`
+
+Exact versions and ranges are defined in [`package.json`](package.json).
+
+## Run Locally
+
+### Prerequisites
+
+- Node.js 20 or newer
+- Bun 1.4.2 or newer
+
+### Installation
+
+Clone the repository and install its dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd bytespace-new
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bun run dev      # Start the development server
+bun run build    # Create a production build
+bun run start    # Serve the production build
+bun run lint     # Check the project with Biome
+bun run format   # Format files with Biome
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Other Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Live application](https://bytespace-new-dun.vercel.app/)
+- [Project screenshot](https://drive.google.com/file/d/1yyyHz56scYpCTfSuv69UXMEcrAuZxRua/view?usp=sharing)
+- [Next.js documentation](https://nextjs.org/docs)
+- [React documentation](https://react.dev/)

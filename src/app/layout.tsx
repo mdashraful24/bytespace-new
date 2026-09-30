@@ -10,13 +10,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ByteSpace — Learn Online with Hundreds of Courses",
+  title: "ByteSpace - Learn Online with Hundreds of Courses",
   description:
     "ByteSpace is the leading online learning platform offering hundreds of courses in web development, data science, design, and more. Start learning today.",
+  icons: {
+    icon: "/logo.png",
+  },
   keywords:
     "online courses, e-learning, web development, data science, design, programming",
   openGraph: {
-    title: "ByteSpace — Learn Online with Hundreds of Courses",
+    title: "ByteSpace - Learn Online with Hundreds of Courses",
     description:
       "Get access to hundreds of courses and start learning from top instructors on ByteSpace.",
     type: "website",

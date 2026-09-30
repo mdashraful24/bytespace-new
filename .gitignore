@@ -40,3 +40,5 @@ ByteSpace New Check website.fig
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
