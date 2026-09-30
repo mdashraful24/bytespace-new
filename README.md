@@ -4,8 +4,6 @@ ByteSpace is a modern learning platform landing page designed to help people dis
 
 **Live demo:** [bytespace-new-dun.vercel.app](https://bytespace-new-dun.vercel.app/)
 
-## Screenshot
-
 [![ByteSpace landing page screenshot](https://drive.google.com/uc?export=view&id=1yyyHz56scYpCTfSuv69UXMEcrAuZxRua)](https://drive.google.com/file/d/1yyyHz56scYpCTfSuv69UXMEcrAuZxRua/view?usp=sharing)
 
 If the preview does not load, [open the screenshot in Google Drive](https://drive.google.com/file/d/1yyyHz56scYpCTfSuv69UXMEcrAuZxRua/view?usp=sharing).
@@ -89,7 +87,5 @@ bun run format   # Format files with Biome
 
 ## Other Links
 
-- [Live application](https://bytespace-new-dun.vercel.app/)
-- [Project screenshot](https://drive.google.com/file/d/1yyyHz56scYpCTfSuv69UXMEcrAuZxRua/view?usp=sharing)
 - [Next.js documentation](https://nextjs.org/docs)
 - [React documentation](https://react.dev/)
