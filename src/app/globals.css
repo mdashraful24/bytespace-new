@@ -34,8 +34,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
-  /* Reserve the 8px custom scrollbar so auto margins center on the visual
-     center instead of the scrollable width. */
   scrollbar-gutter: stable;
 }
 
@@ -63,7 +61,7 @@ body {
   border-radius: 4px;
 }
 
-/* ============ ANIMATIONS ============ */
+/* Motion and animation */
 @keyframes float {
   0%,
   100% {
@@ -190,7 +188,7 @@ body {
   animation: marquee 30s linear infinite;
 }
 
-/* ============ LAYOUT ============ */
+/* Shared layout helpers */
 .container-bs {
   width: 100%;
   max-width: 1280px;
@@ -198,7 +196,7 @@ body {
   padding: 0 24px;
 }
 
-/* ============ HERO ============ */
+/* Hero section */
 .hero-bg {
   background: linear-gradient(140deg, #1236d4 0%, #1a56ff 50%, #2563ff 100%);
   position: relative;
@@ -237,7 +235,7 @@ body {
   pointer-events: none;
 }
 
-/* ============ BUTTONS ============ */
+/* Buttons */
 .btn-lime {
   display: inline-flex;
   align-items: center;
@@ -351,7 +349,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* ============ CARDS ============ */
+/* Cards */
 .course-card {
   background: #fff;
   border-radius: 20px;
@@ -361,7 +359,6 @@ body {
   border: 1px solid #f0f0f0;
 }
 .course-card:hover {
-  transform: translateY(-8px);
   box-shadow: 0 20px 48px rgba(26, 86, 255, 0.12);
   border-color: #e0e8ff;
 }
@@ -386,7 +383,7 @@ body {
   border-radius: 16px;
 }
 
-/* ============ NAV ============ */
+/* Navigation */
 .navbar {
   position: fixed;
   inset: 0 0 auto;
@@ -563,7 +560,7 @@ body {
   color: #1a56ff;
 }
 
-/* ============ MISC ============ */
+/* Extra utilities */
 .section-tag {
   display: inline-flex;
   align-items: center;
