@@ -1,3 +1,6 @@
+"use client";
+
+import type { MouseEvent } from "react";
 import { brandAssets } from "./assets";
 
 const linkColumns = [
@@ -23,6 +26,10 @@ const linkColumns = [
         { label: "About", href: "#" },
     ],
 ];
+
+const handleFooterLinkClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+};
 
 export default function SiteFooter() {
     return (
@@ -64,7 +71,9 @@ export default function SiteFooter() {
                         <ul key={String(index)} className="site-footer__list">
                             {column.map((link) => (
                                 <li key={link.label}>
-                                    <a href={link.href}>{link.label}</a>
+                                    <a href={link.href} onClick={handleFooterLinkClick}>
+                                        {link.label}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -76,9 +85,9 @@ export default function SiteFooter() {
                 <span>© 2023 ByteSpace. All rights reserved.</span>
 
                 <div className="site-footer__legal">
-                    <p>Privacy Policy</p>
-                    <p>Terms of Service</p>
-                    <p>Cookies Settings</p>
+                    <p className="cursor-pointer">Privacy Policy</p>
+                    <p className="cursor-pointer">Terms of Service</p>
+                    <p className="cursor-pointer">Cookies Settings</p>
                 </div>
             </div>
         </footer>

@@ -17,12 +17,12 @@ export default function LearningPaths() {
       </div>
       <div className="path-grid">
         {learningPaths.map((path) => (
-          <a className="path-card" href="#courses" key={path.name}>
+          <div className="path-card" key={path.name}>
             <span className="path-icon">
               <img src={path.icon} alt="" />
             </span>
             <span>{path.name}</span>
-          </a>
+          </div>
         ))}
       </div>
     </section>

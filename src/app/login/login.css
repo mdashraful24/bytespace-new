@@ -1,8 +1,4 @@
-/* /login only. Everything shared with the other auth routes lives in
-   ../auth.css. */
-
-/* `auto` top margin drops the divider, socials and footer to the floor of the
-   card as one block; the padding keeps the 25px gap once min-height goes to 0. */
+/* Login page extras */
 .login-divider {
   display: flex;
   align-items: center;
@@ -27,7 +23,7 @@
   gap: 16px;
 }
 
-/* The brand image is the whole control - no border, fill or padding. */
+/* Social login buttons */
 .login-socials button {
   display: inline-flex;
   padding: 0;

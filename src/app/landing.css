@@ -1,6 +1,4 @@
-/* Landing page styles, ported from byte-space-landing-page-design/app/globals.css.
-  Every selector is scoped under .landing so nothing leaks into the design system.
-  In particular .course-card and --lime collide with the design system in globals.css. */
+/* Landing page styles */
 
 .landing {
   --blue: #123cda;
@@ -16,6 +14,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Growth section */
 .landing .growth-section {
   min-height: 100vh;
   overflow: hidden;
@@ -23,7 +22,6 @@
   background: #fff;
   color: #25262b;
   font-family: Arial, Helvetica, sans-serif;
-  /* border: 2px solid red; */
 }
 
 .landing .growth-inner {
@@ -32,7 +30,6 @@
   width: min(100%, 1258px);
   margin: 0 auto;
   padding: 50px 0;
-  /* border: 2px solid red; */
 }
 
 .landing .growth-row {
@@ -122,7 +119,6 @@
 
 .landing .growth-person-bottom {
   z-index: 2;
-  /* left: 0px; */
   bottom: -150px;
   width: 430px;
   height: auto;
@@ -246,7 +242,6 @@
 
 .landing .growth-copy-bottom p {
   margin-top: 21px;
-  /* max-width: 360px; */
 }
 
 .landing .growth-copy-bottom ul {
@@ -398,7 +393,6 @@
 }
 
 .landing .community-section {
-  /* min-height: 80vh; */
   overflow: hidden;
   position: relative;
   background: #fff;
@@ -453,7 +447,6 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 40px;
-  /* border: 1px solid red; --- IGNORE --- */
 }
 
 .landing .community-card {
@@ -473,7 +466,6 @@
   border-radius: 50%;
   object-fit: cover;
   background: #f2f3f4;
-  /* box-shadow: 0 10px 20px rgba(34, 42, 57, 0.12); */
 }
 
 .landing .community-meta {
@@ -702,11 +694,7 @@
   font: inherit;
 }
 
-/* Outer section container. Caps the full-bleed sections at the 1440px design
-   canvas. Inner content widths (.logo-band-inner 846px, .course-grid 638px,
-   .path-grid 900px) are unchanged, so this is a no-op below 1440px.
-   .site-header (1035px) and .hero-content (1200px) are deliberately left
-   alone — they are already narrower than the canvas. */
+/* Shared section layout */
 .landing .logo-band,
 .landing .course-discovery,
 .landing .learning-paths {
@@ -731,7 +719,6 @@
   justify-content: space-between;
   gap: 32px;
   padding-right: 70px;
-  /* border: 1px solid red; */
 }
 
 .landing .brand-lockup {
@@ -871,8 +858,8 @@
 
 .landing .copy p {
   margin: clamp(14px, 1.8vh, 25px) auto clamp(20px, 3vh, 43px);
-  font-size: clamp(14px, 1.1vw, 17px);
-  max-width: min(650px, 85vw);
+  font-size: clamp(15px, 1.1vw, 18px);
+  max-width: min(840px, 85vw);
   opacity: 0.88;
 }
 
@@ -904,6 +891,7 @@
   font-size: 13px;
 }
 
+/* Search and hero action */
 .landing .search-form button {
   display: inline-flex;
   align-items: center;
@@ -1094,9 +1082,7 @@
 
 .landing .avatar-art {
   display: block;
-  /* width: 150px; */
   height: auto;
-  /* margin-top: 5px; */
   margin-left: auto;
 }
 
@@ -1233,7 +1219,6 @@
   height: 22px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   gap: 10px;
 }
 
@@ -1251,8 +1236,7 @@
   object-fit: contain;
 }
 
-/* Level badge ("Beginner"). Must out-specify the 52px rule above, which is
-   sized for the student-avatar strip. */
+/* Course badges */
 .landing .course-meta .course-level {
   display: inline-flex;
   align-items: center;
@@ -1273,6 +1257,7 @@
   font-size: 16px;
 }
 
+/* Learning paths section */
 .landing .course-price strong {
   font-weight: 800;
 }
@@ -1582,7 +1567,6 @@
   outline: 0;
   background: transparent;
   font-size: 15px;
-  /* color: #262831; */
 }
 
 .landing .site-footer__input::placeholder {
@@ -1659,6 +1643,87 @@
   color: #1d2129;
   text-decoration: none;
   font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .landing .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .landing .site-footer__brand-block,
+  .landing .site-footer__links {
+    width: 100%;
+  }
+
+  .landing .site-footer__form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .landing .site-footer {
+    padding: 28px 20px 12px;
+  }
+
+  .landing .site-footer__inner {
+    padding-bottom: 20px;
+    gap: 22px;
+  }
+
+  .landing .site-footer__brand-block p {
+    font-size: 14px;
+  }
+
+  .landing .site-footer__form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .landing .site-footer__button {
+    width: 100%;
+  }
+
+  .landing .site-footer__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 28px;
+  }
+
+  .landing .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .landing .site-footer__legal {
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .landing .site-footer__logo {
+    margin-bottom: 14px;
+  }
+
+  .landing .site-footer__logo .logo {
+    font-size: 20px;
+  }
+
+  .landing .site-footer__links {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .landing .site-footer__list li {
+    margin-bottom: 10px;
+  }
+
+  .landing .site-footer__brand-block small {
+    font-size: 13px;
+    line-height: 1.6;
+  }
 }
 
 .landing.not-found-page {
@@ -1747,7 +1812,7 @@
   }
 }
 
-/* Laptop screens (14" and 15.6" monitors: 1024px to 1440px) */
+/* Laptop layout */
 @media (min-width: 801px) and (max-width: 1440px) {
   .landing .site-header {
     height: 75px;
@@ -1786,7 +1851,6 @@
     font-size: 13px;
   }
 
-  /* Human / Person image increased ~2x for laptop view */
   .landing .person-art {
     width: clamp(950px, 70vw, 1300px);
     max-width: none;
@@ -1794,14 +1858,12 @@
     object-fit: contain;
   }
 
-  /* Background arch proportionally scaled */
   .landing .asset-shape7 {
     width: clamp(1100px, 90vw, 1600px);
     height: 480px;
     bottom: -80px;
   }
 
-  /* Floating badges scaled and positioned proportionally to the 2x human image */
   .landing .course-card {
     left: calc(50% - clamp(360px, 28vw, 480px));
     bottom: clamp(230px, 32vh, 320px);
@@ -1823,7 +1885,6 @@
     transform-origin: center bottom;
   }
 
-  /* Floating decorative artwork shapes scaled and positioned */
   .landing .asset-shape1 {
     width: clamp(150px, 13vw, 200px);
     left: 0;
@@ -1861,7 +1922,7 @@
   }
 }
 
-/* Height-constrained laptop displays (e.g. 1366x768 with browser toolbar) */
+/* Short laptop screens */
 @media (max-height: 760px) and (min-width: 801px) {
   .landing .site-header {
     height: 65px;
@@ -1873,7 +1934,7 @@
   }
 
   .landing .copy {
-    padding-top: 8px;
+    padding-top: 30px;
   }
 
   .landing .copy h1,
@@ -1883,8 +1944,8 @@
   }
 
   .landing .copy p {
-    margin: 8px auto 14px;
-    font-size: 13px;
+    margin: 14px auto 24px;
+    font-size: 14px;
   }
 
   .landing .course-card {
@@ -1908,6 +1969,10 @@
 
   .landing .asset-shape5 {
     top: 170px;
+  }
+
+  .landing .asset-shape7 {
+    height: 440px;
   }
 
   .landing .growth-inner {
@@ -1941,8 +2006,7 @@
   }
 }
 
-/* Tablet & Mobile Screens: Hide all floating artwork shapes in hero section */
-/* Tablet & Mobile Screens: Hide all floating artwork shapes in hero section */
+/* Tablet and mobile layout */
 @media (max-width: 1023px) {
 
   .landing .creator-section {
@@ -1981,7 +2045,7 @@
   }
 }
 
-/* Tablet Screens (601px to 1023px): Dedicated increased height and spacious layout */
+/* Tablet layout */
 @media (min-width: 601px) and (max-width: 1023px) {
   .landing .creator-section {
     min-height: 460px;
@@ -2320,7 +2384,6 @@
 @media (max-width: 470px) {
   .landing .path-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* max-width: 300px; */
   }
 
   .landing .path-card {
@@ -2371,5 +2434,9 @@
     bottom: -125px;
     width: 330px;
     margin: 0 auto;
+  }
+
+  .landing .site-footer__bottom {
+    align-items: center;
   }
 }
